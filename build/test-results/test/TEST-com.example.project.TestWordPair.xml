@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestWordPair" tests="2" skipped="0" failures="2" errors="0" timestamp="2025-02-07T16:13:21" hostname="codespaces-cc8cd4" time="0.025">
+<testsuite name="com.example.project.TestWordPair" tests="2" skipped="0" failures="2" errors="0" timestamp="2025-02-18T19:17:01" hostname="codespaces-f936ab" time="0.011">
   <properties/>
-  <testcase name="testPARTA()" classname="com.example.project.TestWordPair" time="0.008">
+  <testcase name="testPARTA()" classname="com.example.project.TestWordPair" time="0.002">
     <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
 	at com.example.project.WordPair.WordPairList.toString(WordPairList.java:26)
 	at com.example.project.TestWordPair.testPARTA(TestWordPair.java:14)

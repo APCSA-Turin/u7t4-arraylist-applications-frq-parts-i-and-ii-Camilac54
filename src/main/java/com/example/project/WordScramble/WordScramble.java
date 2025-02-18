@@ -13,8 +13,25 @@ public class WordScramble {
    *  - letters were swapped at most once
    */
   public static String scrambleWord(String word) {
-      /* to be implemented in part (a) */
-      return "";
+    /* to be implemented in part (a) */
+    String newWord = "";
+    int i = 0;
+    while ( i < word.length() - 1) {
+      if (word.substring(i, i + 1).equals("A") && !word.substring(i + 1, i + 2).equals("A")) {
+        newWord += word.substring(i + 1, i + 2);
+        newWord += word.substring(i, i + 1);
+        i += 2;
+      } else {
+        newWord += word.substring(i, i + 1);
+        i ++;
+      }
+    }
+
+    if (i < word.length()) {
+      newWord += word.substring(i, i + 1);
+    }
+  
+    return newWord;
   }
 
   /** Modifies wordList by replacing each word with its scrambled
@@ -31,6 +48,13 @@ public class WordScramble {
    */
   public static ArrayList<String> scrambleOrRemove(ArrayList<String> wordList) {
       /* to be implemented in part (b) */
-      return new ArrayList<String>();
+      ArrayList<String> result = new ArrayList<String>();
+      for (int i = 0; i < wordList.size(); i ++) {
+        if (!(wordList.get(i).equals(scrambleWord(wordList.get(i))))) {
+          result.add(scrambleWord(wordList.get(i)));
+        }
+      }
+      wordList = result;
+      return wordList;
   }
 }
